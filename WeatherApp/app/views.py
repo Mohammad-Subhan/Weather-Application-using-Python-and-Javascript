@@ -1,8 +1,19 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+import requests
+
 
 # Create your views here.
-def index():
-    pass
+def index(request):
+    if request.method == "POST":
+        city = request.POST["city"]
 
-def weather():
+        return HttpResponseRedirect(reverse("weather", kwargs={
+                "city" : city
+            }))
+    else:
+        return render(request, "app/index.html")
+
+def weather(request, city):
     pass

@@ -1,7 +1,7 @@
 from django.urls import path
-import views
+from . import views
 
-urlspatterns = [
+urlpatterns = [
     path("", views.index, name="index"),
     path("weather/<str:city>", views.weather, name="weather"),
 ]
