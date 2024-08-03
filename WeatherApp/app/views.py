@@ -10,10 +10,15 @@ def index(request):
         city = request.POST["city"]
 
         return HttpResponseRedirect(reverse("weather", kwargs={
-                "city" : city
-            }))
+            "city": city
+        }))
     else:
         return render(request, "app/index.html")
 
+
 def weather(request, city):
-    pass
+    if request.method == "GET":
+        print(city)
+        return render(request, "app/weather.html", {
+            "city": city
+        })

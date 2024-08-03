@@ -1,0 +1,39 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ city }}
+{% endblock %}
+
+{% block stylesheet %}
+    <link href="{% static 'app/css/weather.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="body-div">
+        <div class="spinner-container">
+            <span id="error-span"></span>
+            <div id="spinner" class="spinner"></div>
+        </div>
+        <div class="weather-div">
+            <div class="inner-weather-div">
+                <div class="current-weather-div">
+
+                </div>
+                <div class="detail-forecast-div">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        // Define a global JavaScript object with context data
+        window.djangoContext = {
+            city: "{{ city }}"
+        };
+    </script>
+    <script src="{% static 'app/Javascript/weather.js' %}"></script>
+{% endblock %}

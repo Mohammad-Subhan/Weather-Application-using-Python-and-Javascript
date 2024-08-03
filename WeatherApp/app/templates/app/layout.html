@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Weatherly{% endblock %}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
-    <link href="{% static 'app/layout.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{% static 'app/css/layout.css' %}" rel="stylesheet">
     {% block stylesheet %}{% endblock %}
+    {% block script %}{% endblock %}
 </head>
 <body>
     <div class="header">
         <div class="web-name">Weatherly</div>
-        <div class="home-button-div"><a href="#" class="home-button-link">Home</a></div>
+        <div class="home-button-div"><a href="{% url 'index' %}" class="home-button-link">Home</a></div>
     </div>
     {% block body %}
     {% endblock %}

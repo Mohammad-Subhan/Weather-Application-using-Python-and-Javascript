@@ -2,21 +2,29 @@
 {% load static %}
 
 {% block stylesheet %}
-<link href="{% static 'app/index.css' %}" rel="stylesheet">
+    <link href="{% static 'app/css/index.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
-<div class="body-div">
-    <div class="form-div">
-        <form action="#" method="post" class="city-form">
-            {% csrf_token %}
-            <label id="city-label">Enter City Name</label>
-            <div class="input-div">
-                <img src="{% static 'app/icons/location.png' %}" id="location-icon" alt="Location-icon">
-                <input type="text" name="city" class="form-field" id="city-field" autocomplete="off" placeholder="City">
-                <button type="submit" value="Search" class="form-field" id="search-button"><img src="{% static 'app/icons/search.png' %}" alt="Search-Icon" id="search-button-icon"></button>
-            </div>
-        </form>
+    <div class="body-div">
+        <div class="form-div">
+            <form action="#" method="post" id="form" class="city-form">
+                {% csrf_token %}
+                <label id="city-label">Enter City Name</label>
+                <div class="input-div">
+                    <img src="{% static 'app/icons/location.png' %}" id="location-icon" alt="Location-icon">
+                    <input type="text" name="city" class="form-field" id="city-field" autocomplete="off"
+                           placeholder="City" autofocus>
+                    <button type="submit" value="Search" class="form-field" id="search-button"><img
+                            src="{% static 'app/icons/search.png' %}" alt="Search-Icon" id="search-button-icon">
+                    </button>
+                </div>
+                <span id="error-span"></span>
+            </form>
+        </div>
     </div>
-</div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'app/Javascript/index.js' %}"></script>
 {% endblock %}

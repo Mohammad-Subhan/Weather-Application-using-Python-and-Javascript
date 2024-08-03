@@ -1,0 +1,273 @@
+#error-span{
+    color: red;
+    font-size: 20px;
+    display: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    display: block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.body-div {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-div{
+    display: none;
+}
+
+.inner-weather-div {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    display: grid;
+    grid-template-columns: 500px 500px;
+    align-items: center;
+}
+
+.current-weather-div {
+    position: relative;
+    border-radius: 25px;
+    background-color: #88bbdc;
+    width: 500px;
+    height: 600px;
+}
+
+.detail-forecast-div {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 500px;
+    height: 550px;
+    background-color: #212832;
+}
+
+#date-location-div {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#weather-condition-div {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.date {
+    margin: 7px 7px 7px 0;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.location-div {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+.location-img {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.location {
+    margin: 5px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+.temperature {
+    font-size: 50px;
+    font-weight: 750;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.main-weather {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 2px 2px 20px 0;
+}
+
+.feels-like-temp {
+    font-size: 14px;
+    margin: 5px 0 0 5px;
+}
+
+.details-div {
+    padding: 10px;
+}
+
+.description-div {
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-right: 30px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.description-label {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.description-value {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.extra-details-div {
+    display: grid;
+    grid-template-columns: 100px 100px auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #262d37;
+    justify-content: center;
+    padding: 5px;
+}
+
+#sun-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.details-img {
+    height: 80px;
+    width: 80px;
+}
+
+#humidity-img{
+    height: 40px;
+    width: 40px;
+}
+
+.labels {
+    font-size: 13px;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.values {
+    color: #ccc;
+}
+
+.forecast-div {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px 80px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.day-divs {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #262d37;
+    justify-content: center;
+    padding: 5px;
+    height: 140px;
+}
+
+.forecast-labels {
+    margin: 0;
+    display: flex;
+    font-size: 12px;
+    color: white;
+    justify-content: center;
+}
+
+.details-img {
+    height: 60px;
+    width: 60px;
+}
+
+.forecast-img {
+    height: 50px;
+    width: 50px;
+}
+
+#weather-icon {
+    width: 200px;
+    height: 180px;
+}
+
+#forecast-label {
+    padding-left: 30px;
+}
+
+#wind-value{
+    padding-bottom: 5px;
+}
+
+#humidity-label{
+    padding-top: 8px;
+}
