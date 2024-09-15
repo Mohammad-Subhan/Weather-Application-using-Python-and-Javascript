@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const city = window.djangoContext.city;
-    getWeatherData(city);
+    const WEATHER_API_KEY = window.djangoContext.weather_api_key;
+    getWeatherData(city, WEATHER_API_KEY);
 });
 
-function getWeatherData(city) {
+function getWeatherData(city, API_KEY) {
 
     const spinner = document.querySelector("#spinner");
     const content = document.querySelector(".weather-div");
     const errorSpan = document.querySelector("#error-span");
 
-    const API_KEY = "YOUR_API_KEY"
-    const currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=[cityName]&appid=[API_KEY]"
-    const weatherForecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=[lat]&lon=[lon]&appid=[API_KEY]"
+    const currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=[cityName]&appid=[API_KEY]";
+    const weatherForecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=[lat]&lon=[lon]&appid=[API_KEY]";
 
     fetch(currentWeatherURL.replace("[cityName]", city).replace("[API_KEY]", API_KEY))
         .then(response => response.json())

@@ -32,7 +32,8 @@
     <script>
         // Define a global JavaScript object with context data
         window.djangoContext = {
-            city: "{{ city }}"
+            city: "{{ city }}",
+            weather_api_key:"{{weather_api_key}}"
         };
     </script>
     <script src="{% static 'app/Javascript/weather.js' %}"></script>
