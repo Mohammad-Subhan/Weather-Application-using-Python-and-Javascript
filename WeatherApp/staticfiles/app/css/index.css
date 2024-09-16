@@ -1,0 +1,81 @@
+.body-div {
+    height: 100vh;
+    position: relative;
+}
+
+.form-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.city-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#city-label {
+    display: flex;
+    justify-content: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.input-div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #ccc;
+    height: 50px;
+    width: 400px;
+    border-radius: 25px;
+}
+
+#location-icon {
+    padding-left: 10px;
+    height: 25px;
+    width: 25px;
+}
+
+#city-field{
+    background: transparent;
+    border: none;
+    height: 30px;
+    width: 305px;
+    font-size: 15px;
+    font-family: "Montserrat", serif;
+    color: #212832;
+    padding-left: 10px;
+    caret-color: #212832;
+    letter-spacing: 0.5px;
+}
+
+#city-field:focus{
+    border: none;
+    outline: none;
+}
+
+#search-button{
+    background: transparent;
+    border: none;
+    border-left: 1px solid #aaaaaa;
+    height: 28px;
+}
+
+#search-button:hover{
+    cursor: pointer;
+}
+
+#search-button-icon{
+    width: 22px;
+    height: 22px;
+}
+
+#error-span{
+    color: red;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
