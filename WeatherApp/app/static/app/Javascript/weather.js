@@ -13,6 +13,7 @@ function getWeatherData(city, API_KEY) {
     const currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=[cityName]&appid=[API_KEY]";
     const weatherForecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=[lat]&lon=[lon]&appid=[API_KEY]";
 
+    console.log(API_KEY)
     fetch(currentWeatherURL.replace("[cityName]", city).replace("[API_KEY]", API_KEY))
         .then(response => response.json())
         .then(weatherData => {
