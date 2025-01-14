@@ -1,1 +1,2 @@
 WeatherApp/.env
+*.venv
