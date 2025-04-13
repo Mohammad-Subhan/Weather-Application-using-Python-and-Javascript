@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from dotenv import load_dotenv
 import os
 
 
@@ -17,9 +18,8 @@ def index(request):
 def weather(request, city):
     if request.method == "GET":
         # get the api key form the environment
+        load_dotenv()
         WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
-
-        print(city)
 
         return render(
             request,
