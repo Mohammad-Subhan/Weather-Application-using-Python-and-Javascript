@@ -45,7 +45,7 @@ A weather application built with **Django** (backend) and **HTML templates** (fr
 
     Run the server
 
-    ```bash
+    ```python
     python manage.py makemigrations
     python manage.py migrate
     python manage.py runserver
