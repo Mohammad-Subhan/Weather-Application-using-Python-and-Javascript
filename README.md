@@ -1,6 +1,7 @@
 # 🌦️ Django Weather App
 
 A weather application built with **Django** (backend) and **HTML templates** (frontend), powered by the OpenWeatherMap API.
+Live Demo: [Weatherly](https://www.weatherly-application.vercel.app)
 
 
 ## ✨ Features
